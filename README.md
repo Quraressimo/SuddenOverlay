@@ -9,6 +9,8 @@
 
 <img width="728" height="371" alt="image" src="https://github.com/user-attachments/assets/d64154a1-5dc9-49fd-95ef-b188cb3ae3d0" />
 
+<br><br>
+
 뭘 할 수 있나요?
 
 <img width="120" height="136" alt="image" src="https://github.com/user-attachments/assets/187a7f95-8e7c-4ff0-8054-0b46eebc02f2" />
@@ -45,7 +47,7 @@ SuddenOverlay.phw 파일을 오픈하시면 화면 좌상단에 민트색 박스
 
 전체 종료  :  프로그램을 종료합니다.
 
-
+<br>
 
 이미지, 컬러 박스를 추가, 이동한 흔적이 있다면 동일 경로에 overlay_config.json 파일이 생성됩니다.
 
@@ -55,7 +57,7 @@ SuddenOverlay.phw 파일을 오픈하시면 화면 좌상단에 민트색 박스
 
 해상도가 너무 큰 png파일, 용량이 큰 gif, webp는 추천하지 않습니다.
 
-
+<br>
 
 예시
 

@@ -5,7 +5,9 @@
 <img width="745" height="916" alt="image" src="https://github.com/user-attachments/assets/d2eb4eb2-2405-4fa1-af60-c046aa30563c" />
 
 
+.exe 실행 시 다음과 같은 오류가 발생 할 수 있습니다.
 
+<img width="728" height="371" alt="image" src="https://github.com/user-attachments/assets/d64154a1-5dc9-49fd-95ef-b188cb3ae3d0" />
 
 뭘 할 수 있나요?
 

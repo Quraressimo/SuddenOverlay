@@ -1,5 +1,12 @@
 로키스튜디오가 서든을 안 내줘서 직접 Gemini갈궈서 만들었습니다.
 
+.pyw 확장자로 실행 시 파이썬 및 라이브러리 설치가 필요합니다.
+
+<img width="745" height="916" alt="image" src="https://github.com/user-attachments/assets/d2eb4eb2-2405-4fa1-af60-c046aa30563c" />
+
+
+
+
 뭘 할 수 있나요?
 
 <img width="120" height="136" alt="image" src="https://github.com/user-attachments/assets/187a7f95-8e7c-4ff0-8054-0b46eebc02f2" />

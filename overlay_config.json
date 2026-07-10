@@ -1,31 +1,21 @@
 [
     {
         "content_type": "color",
-        "data": "#ffffff",
-        "width": 680,
-        "height": 350,
-        "x": 83,
-        "y": -1,
-        "alpha": 1.0,
-        "tint_color": null
-    },
-    {
-        "content_type": "image",
-        "data": "C:/Users/kh/Desktop/test/MS_Wallpaper_len_SP.jpg",
-        "width": 528,
-        "height": 1147,
-        "x": 1208,
+        "data": "#c6ffdd",
+        "width": 688,
+        "height": 503,
+        "x": 345,
         "y": 79,
         "alpha": 1.0,
         "tint_color": null
     },
     {
         "content_type": "image",
-        "data": "C:/Users/kh/Desktop/test/img.gif",
-        "width": 800,
-        "height": 465,
-        "x": 1712,
-        "y": 621,
+        "data": "C:/Users/kh/Documents/GitHub/SuddenOverlay/MS_Wallpaper_len_SP.jpg",
+        "width": 200,
+        "height": 200,
+        "x": 0,
+        "y": 0,
         "alpha": 1.0,
         "tint_color": null
     }

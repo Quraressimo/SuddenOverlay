@@ -1,0 +1,32 @@
+[
+    {
+        "content_type": "color",
+        "data": "#ffffff",
+        "width": 680,
+        "height": 350,
+        "x": 83,
+        "y": -1,
+        "alpha": 1.0,
+        "tint_color": null
+    },
+    {
+        "content_type": "image",
+        "data": "C:/Users/kh/Desktop/test/MS_Wallpaper_len_SP.jpg",
+        "width": 528,
+        "height": 1147,
+        "x": 1208,
+        "y": 79,
+        "alpha": 1.0,
+        "tint_color": null
+    },
+    {
+        "content_type": "image",
+        "data": "C:/Users/kh/Desktop/test/img.gif",
+        "width": 800,
+        "height": 465,
+        "x": 1712,
+        "y": 621,
+        "alpha": 1.0,
+        "tint_color": null
+    }
+]

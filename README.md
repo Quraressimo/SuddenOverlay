@@ -43,3 +43,11 @@ SuddenOverlay.phw 파일을 오픈하시면 화면 좌상단에 민트색 박스
 오버레이의 on/off 토글키가 있습니다(기본값 F8)
 
 해상도가 너무 큰 png파일, 용량이 큰 gif, webp는 추천하지 않습니다.
+
+예시
+
+<img width="2560" height="1440" alt="image" src="https://github.com/user-attachments/assets/dde903d3-f531-4760-a11a-12a81f4aa024" />
+
+<img width="428" height="38" alt="image" src="https://github.com/user-attachments/assets/a89b98a0-8b4f-42af-99f3-fa042cc9dc17" />
+
+위와 같이 셋팅시 약 140mb 메모리 점유율을 나타냅니다. (컬러박스, jpg, gif, webp)

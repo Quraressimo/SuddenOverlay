@@ -1,10 +1,10 @@
 {
-  "x": 0,
-  "y": 0,
+  "x": 835,
+  "y": 59,
   "width": 900,
   "height": 180,
   "opacity": 100,
-  "color": "#000000",
+  "color": "#8e58e9",
   "image_path": "",
   "visible": true,
   "settings_always_on_top": false,
@@ -13,5 +13,39 @@
   "dark_mode": true,
   "visibility_key": "f6",
   "quit_key": "f8",
-  "extra_covers": []
+  "extra_covers": [
+    {
+      "name": "Lane Cover 2",
+      "x": "139",
+      "y": "100",
+      "width": "200",
+      "height": "500",
+      "opacity": "100",
+      "color": "#912FC3",
+      "image": "",
+      "visible": true
+    },
+    {
+      "name": "Lane Cover 3",
+      "x": "1955",
+      "y": "399",
+      "width": "200",
+      "height": "500",
+      "opacity": "100",
+      "color": "#79E2AE",
+      "image": "",
+      "visible": true
+    },
+    {
+      "name": "Lane Cover 4",
+      "x": "1462",
+      "y": "236",
+      "width": "200",
+      "height": "500",
+      "opacity": "100",
+      "color": "#778825",
+      "image": "",
+      "visible": true
+    }
+  ]
 }

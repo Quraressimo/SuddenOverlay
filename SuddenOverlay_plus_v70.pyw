@@ -23,6 +23,7 @@ import ctypes
 import json
 import random
 import os
+import sys
 import tkinter as tk
 from tkinter import colorchooser
 from tkinter import ttk, messagebox, filedialog
@@ -36,7 +37,11 @@ except ImportError:
 if os.name != "nt":
     raise SystemExit("This version is for Windows.")
 
-APP_DIR = os.path.dirname(os.path.abspath(__file__))
+# Keep settings beside the executable when packaged with PyInstaller; otherwise beside the script.
+if getattr(sys, "frozen", False):
+    APP_DIR = os.path.dirname(os.path.abspath(sys.executable))
+else:
+    APP_DIR = os.path.dirname(os.path.abspath(__file__))
 SETTINGS_FILE = os.path.join(APP_DIR, "SuddenOverlay_plus_settings.json")
 
 DEFAULTS = {

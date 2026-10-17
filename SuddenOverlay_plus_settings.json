@@ -1,0 +1,17 @@
+{
+  "x": 0,
+  "y": 0,
+  "width": 900,
+  "height": 180,
+  "opacity": 100,
+  "color": "#000000",
+  "image_path": "",
+  "visible": true,
+  "settings_always_on_top": false,
+  "overlay_always_on_top": false,
+  "always_on_top": false,
+  "dark_mode": true,
+  "visibility_key": "f6",
+  "quit_key": "f8",
+  "extra_covers": []
+}

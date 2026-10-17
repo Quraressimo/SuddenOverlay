@@ -12,6 +12,7 @@ class FloatingOverlay:
     def __init__(self, master, content_type="color", data="#c6ffdd"):
         self.master = master
         self.window = tk.Toplevel(master)
+        self.window.title("오버레이")
         self.window.overrideredirect(True)
         self.window.attributes('-topmost', True)
         
@@ -442,29 +443,44 @@ def save_all_config():
 
 def load_all_config(master):
     config_file = "overlay_config.json"
+    loaded_count = 0  # 🚨 성공적으로 로드한 창의 개수를 셉니다!
+    
     if os.path.exists(config_file):
         try:
             with open(config_file, "r", encoding="utf-8") as f:
                 config_data = json.load(f)
+            
             if config_data:
                 for item in config_data:
-                    # 🚨 캡처된 데이터를 기반으로 먼저 인스턴스를 빈 껍데기로 생성한 뒤 수치 강제 주입
-                    overlay = FloatingOverlay(
-                        master, 
-                        content_type=item["content_type"], 
-                        data=item["data"]
-                    )
-                    if item.get("tint_color") and item["content_type"] == "image":
-                        overlay.apply_color_tint(item["tint_color"])
-                    
-                    overlay.resize_to_pixels(item["width"], item["height"])
-                    overlay.window.geometry(f"+{item['x']}+{item['y']}")
-                    overlay.window.attributes('-alpha', item["alpha"])
-                return
+                    # 🚨 아이템을 개별적으로 try-except로 묶어 하나가 실패해도 다음으로 넘어갑니다.
+                    try:
+                        overlay = FloatingOverlay(
+                            master, 
+                            content_type=item["content_type"], 
+                            data=item["data"]
+                        )
+                        if item.get("tint_color") and item["content_type"] == "image":
+                            overlay.apply_color_tint(item["tint_color"])
+                        
+                        overlay.resize_to_pixels(item["width"], item["height"])
+                        overlay.window.geometry(f"+{item['x']}+{item['y']}")
+                        overlay.window.attributes('-alpha', item["alpha"])
+                        
+                        loaded_count += 1 # 로드 성공!
+                    except Exception as e:
+                        print(f"항목 로드 실패 ({item.get('data', '알 수 없음')}): {e}")
+                        # 💡 파일이 없어 실패한 경우, 잘못 생성된 빈 껍데기 창을 깨끗하게 지웁니다.
+                        if FloatingOverlay.instances:
+                            failed_instance = FloatingOverlay.instances[-1]
+                            FloatingOverlay.instances.remove(failed_instance)
+                            failed_instance.window.destroy()
+                            
         except Exception as e:
-            print(f"설정 로드 실패: {e}")
+            print(f"설정 파일 읽기 실패: {e}")
             
-    FloatingOverlay(master)
+    # 🚨 로드된 창이 단 하나도 없을 때(초기 실행 등)만 새 컬러박스를 생성합니다!
+    if loaded_count == 0:
+        FloatingOverlay(master)
 
 def exit_program(master):
     # 🚨 [핵심 해결책] 전체 종료 플래그를 먼저 활성화하여 창이 파괴될 때 빈 저장이 일어나는 연쇄 반응을 차단합니다.
@@ -472,9 +488,24 @@ def exit_program(master):
     save_all_config()
     master.destroy()
 
+# if __name__ == "__main__":
+#     root = tk.Tk()
+#     root.withdraw() 
+#     load_all_config(root)
+#     check_hotkey(root) # 🚨 메인 루프가 돌기 직전에 단축키 감지 시스템 가동!
+#     root.mainloop()
+
 if __name__ == "__main__":
     root = tk.Tk()
-    root.withdraw() 
+    
+    # 기존 root.withdraw()는 삭제하거나 주석 처리해주세요!
+    # root.withdraw() 
+    
+    # 메인 창을 보이지 않게 처리하되, 작업표시줄에는 남겨둡니다!
+    root.geometry("0x0+-100+-100") 
+    root.attributes('-alpha', 0.0) 
+    root.title("플로팅 오버레이")  
+    
     load_all_config(root)
-    check_hotkey(root) # 🚨 메인 루프가 돌기 직전에 단축키 감지 시스템 가동!
+    check_hotkey(root) 
     root.mainloop()

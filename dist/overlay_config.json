@@ -1,0 +1,32 @@
+[
+    {
+        "content_type": "color",
+        "data": "#c6ffdd",
+        "width": 200,
+        "height": 200,
+        "x": 562,
+        "y": 565,
+        "alpha": 1.0,
+        "tint_color": null
+    },
+    {
+        "content_type": "image",
+        "data": "C:/Users/kh/Desktop/shatter.png",
+        "width": 200,
+        "height": 200,
+        "x": 0,
+        "y": 0,
+        "alpha": 1.0,
+        "tint_color": null
+    },
+    {
+        "content_type": "color",
+        "data": "#c6ffdd",
+        "width": 200,
+        "height": 200,
+        "x": 0,
+        "y": 0,
+        "alpha": 1.0,
+        "tint_color": null
+    }
+]
